@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { __param } from 'tslib';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  mensaje: string = "";
+  constructor(private rutaActiva : ActivatedRoute) {
+
+    this.rutaActiva.queryParams.subscribe(params =>{
+
+      if(params['usuario'])
+      {
+        this.mensaje = params['usuario'];
+      }
+
+      })
+
+  }
 
 }

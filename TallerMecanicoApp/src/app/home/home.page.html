@@ -1,25 +1,58 @@
-
-
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar class="colorAzul">
+    <ion-title style="background-color: rgb(73, 73, 206);">
+      BIENVENIDO
     </ion-title>
     
   </ion-toolbar>
   
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content style="background-color: white;">
+
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar class="colorAzul">
+        <ion-title>Opciones</ion-title>
+        <ion-item>
+          <ion-label>Reservar hora</ion-label>
+        </ion-item>
+        
+        
+        <ion-item color="tertiary">
+          <ion-label>Tertiary Item</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Reservar hora</ion-label>
+        </ion-item>
+
+        <ion-item color="tertiary">
+          <ion-label>Tertiary Item</ion-label>
+        </ion-item>
+  
+        
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <img src="assets/imagenes/logo.jpg" alt="Logo de la aplicación">
+      
+    </ion-content>
+  </ion-menu>
+
+  
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar class="colorAzul">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"></ion-content>
   </div>
 
   <ion-card>

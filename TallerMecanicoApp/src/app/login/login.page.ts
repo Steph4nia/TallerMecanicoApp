@@ -26,7 +26,6 @@ export class LoginPage implements OnInit {
     let datosEnviar: NavigationExtras = {
       queryParams: { 
         usuario: this.formLogin.usuario, // Establecer usuario
-        edad: 24 // Ejemplo de otro dato
       }
     };
 

@@ -8,7 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 import { HomePageRoutingModule } from './home-routing.module';
 
 
@@ -22,7 +22,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
   ],
   declarations: [HomePage]
 })

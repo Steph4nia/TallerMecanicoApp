@@ -1,27 +1,38 @@
-#container {
+.colorAzul {
+  --background: rgb(73, 73, 206);
+  --color: white;
+}
+
+/* Estilo para los nombres de los desarrolladores */
+ion-footer ion-label {
+  display: block;
+  margin-top: 5px;
+  /* Ajusta el margen superior según tus preferencias */
+}
+
+.centered-text {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+
+.servicios-card img {
+  max-height: 150px; /* Altura máxima deseada */
+  width: auto; /* Ancho automático para mantener la proporción */
+  margin: 0 auto; /* Centra horizontalmente la imagen */
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
 
-  color: #8c8c8c;
 
-  margin: 0;
+
+.centered-card {
+  width: 80%; /* Ajusta el ancho del mat-card según tus preferencias */
+  margin: auto;
 }
 
-#container a {
-  text-decoration: none;
+.centered-header {
+  text-align: center; /* Centra horizontalmente la imagen */
+}
+
+.centered-title {
+  text-align: center; /* Centra horizontalmente el título */
 }

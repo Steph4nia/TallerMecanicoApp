@@ -4,8 +4,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-img src="assets/imagenes/login.png"></ion-img>
+<ion-content class="content-center">
+  <ion-img class="logo" src="assets/imagenes/logo.jpg"></ion-img>
 
   <ion-item>
     <ion-label position="floating"> Usuario</ion-label>
@@ -16,8 +16,27 @@
     <ion-input [(ngModel)]="formLogin.password" type="password" placeholder="Ingrese su contraseña"></ion-input>
   </ion-item>
   
-    <ion-button (click)="iniciarSesion()" shape="block">Iniciar sesion</ion-button>
+  <ion-button (click)="iniciarSesion()" shape="block">Iniciar sesión</ion-button>
 
-    <ion-button [routerLink]="['/restablecer-password']" shape="block">Restablecer Contraseña</ion-button>
-
+  <ion-row justify-content-end class="ion-text-end">
+    <ion-col>
+      <a [routerLink]="['/restablecer-password']" fill="clear" class="reset-password-link">Restablecer contraseña</a>
+    </ion-col>
+  </ion-row>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row class="ion-align-items-center"> <!-- Alinea verticalmente el contenido -->
+      <ion-col size="6">
+        <ion-title>ServiExpress</ion-title>
+      </ion-col>
+      <ion-col size="6" class="ion-text-right"> <!-- Aplica alineación a la derecha -->
+        <ion-label>Stephania Lucero</ion-label>
+        <ion-label>Isabella Silva</ion-label>
+        <ion-label>Patricia Nieves</ion-label>
+        <ion-label>Loreto Miño</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

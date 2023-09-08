@@ -1,103 +1,57 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-  
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
-.example-spacer {
-  flex : 1  1 auto;
-  background-color: #8c8c8c;
-}
-
-/*.custom-element{
-  position: absolute;
-  top: 5px; /* Ajusta la distancia desde la parte superior según tu preferencia */
-  /*left: 10px; /* Ajusta la distancia desde la derecha según tu preferencia */
-  /*z-index: 9999; /* Ajusta el valor z-index si es necesario para que la imagen esté encima de otros elementos */
-
-
- /* Estilos para el logo */
- ion-menu img {
-   width: 150px; /* Ajusta el ancho del logo según tus necesidades */
-   height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
-   display: block; /* Para centrar horizontalmente la imagen */
-   margin: 0 auto; /* Para centrar horizontalmente la imagen */
-   padding: 10px 0; /* Añade espacio alrededor del logo según tus necesidades */
- }
-
- /* Cambia el color de fondo a azul */
-ion-content {
-  --ion-background-color: white; /* Cambia el color a azul */
-}
-
-ion-card {
-  width: 200px; /* Ancho deseado */
-  height: 300px; /* Altura deseada */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.colorAzul{
-  --background: rgb(73,73,206);
-  --color:white;
-}
-
-ion-item {
-  --padding-start: 0;
-}
-ion-footer ion-label {
-  display: block;
-  margin-top: 5px; /* Ajusta el margen superior según tus preferencias */
-}
-
-.titulo{
-  text-align: center;
-  margin-top: 30px;
-}
-
-.centered-image {
-  text-align: center;
+.colorAzul {
+  --background: rgb(73, 73, 206);
+  --color: white;
 }
 
 .logo-menu {
-  width: 100px;
-  height: 100px;
-  display: block;
-  margin: 0 auto; /* Esto centrará la imagen horizontalmente */
+  width: 100px; /* Establece el ancho deseado */
+  height: auto; /* Mantiene la proporción original de la imagen */
 }
 
-.mat-icon-button mat-icon {
-  color:white;
-}
 
-.centered-grid {
+.centered-image {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  height: 100vh; /* Ajusta la altura al 100% de la ventana */
+}
+
+/* Estilo para los nombres de los desarrolladores */
+ion-footer ion-label {
+  display: block;
+  margin-top: 5px;
+  /* Ajusta el margen superior según tus preferencias */
+}
+
+.centered-text {
+  text-align: center;
+}
+
+
+.servicios-card img {
+
+  max-height: 150px; /* Altura máxima deseada */
+  width: auto; /* Ancho automático para mantener la proporción */
+  margin: 0 auto; /* Centra horizontalmente la imagen */
+}
+
+
+
+
+.centered-card {
+  width: 80%; /* Ajusta el ancho del mat-card según tus preferencias */
+  margin: auto;
+  margin-top: 30px;
+}
+
+.centered-header {
+  text-align: center; /* Centra horizontalmente la imagen */
+}
+
+.centered-title {
+  text-align: center; /* Centra horizontalmente el título */
+}
+
+.titulo{
+  margin-top: 30px;
+  text-align: center;
 }

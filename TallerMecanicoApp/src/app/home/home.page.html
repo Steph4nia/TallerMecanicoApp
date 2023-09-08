@@ -1,8 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="colorAzul">
     <button mat-button [matMenuTriggerFor]="menu">
-      <mat-icon style="color: white;">menu</mat-icon> <!-- Aquí se agrega el icono (por ejemplo, 'menu') -->
+      <mat-icon style="color: white;">menu</mat-icon>
     </button>
+    
     <mat-menu #menu="matMenu">
       <button mat-menu-item>Nuestros Servicios</button>
       <button mat-menu-item>Nosotros</button>
@@ -12,31 +13,45 @@
       </div>
     </mat-menu>
 
-
+    <div class="centered-text">
+      <p>{{mensaje}}</p>
+    </div>
   </ion-toolbar>
+  
 </ion-header>
 
 
 
-<ion-content>
+<ion-content class="centered-content">
+  
+  <ion-title class="titulo">Nuestros Servicios</ion-title>
 
-  <p>{{mensaje}}</p>
-
-  <div class="centered-grid">
-    <mat-grid-list cols="2" gutterSize="16px">
-      <mat-grid-tile>
-        <mat-card>
-          <img mat-card-image [src]="'assets/imagenes/frenos.png'" alt="">
-          <mat-card-content>
-            <mat-card-title>Frenos</mat-card-title>
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+  <div class="centered-card">
+    <mat-card class="servicios-card">
+      <mat-card-header class="centered-header">
+        <img mat-card-image src="assets/imagenes/frenos.jpg" alt="">
+      </mat-card-header>
+    
+      <mat-card-content class="centered-content">
+        <mat-card-title class="centered-title">Frenos</mat-card-title>
+      </mat-card-content>
+    </mat-card>
   </div>
 
+  <div class="centered-card">
+    <mat-card class="servicios-card">
+      <mat-card-header class="centered-header">
+        <img mat-card-image src="assets/imagenes/aceite.jpg" alt="">
+      </mat-card-header>
+    
+      <mat-card-content class="centered-content">
+        <mat-card-title class="centered-title">Aceite</mat-card-title>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
 </ion-content>
+
 
 <ion-footer>
   <ion-toolbar>

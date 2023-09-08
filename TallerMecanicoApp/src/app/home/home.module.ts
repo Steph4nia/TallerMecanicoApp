@@ -8,11 +8,12 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
-
 import { HomePageRoutingModule } from './home-routing.module';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
+  
   imports: [
     CommonModule,
     FormsModule,
@@ -22,9 +23,12 @@ import { HomePageRoutingModule } from './home-routing.module';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
+    
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+
 })
 export class HomePageModule {}
 

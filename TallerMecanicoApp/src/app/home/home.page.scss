@@ -28,29 +28,6 @@
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-ion-input.custom {
-  --background: #723ac6;
-  --color: #ddd;
-  --placeholder-color: #2ad8d3;
-  --placeholder-opacity: 0.8;
-
-  --padding-bottom: 10px;
-  --padding-end: 10px;
-  --padding-start: 10px;
-  --padding-top: 10px;
-
-  /* Establece el ancho deseado (puedes ajustarlo según tus necesidades) */
-  width: 80%; /* Por ejemplo, 80% del ancho del contenedor */
-
-  /* Centra el elemento horizontalmente */
-  margin: 0 auto;
-}
-
-ion-input.custom .helper-text,
-ion-input.custom .counter {
-  color: var(--ion-color-step-700, #373737);
-=======
 .example-spacer {
   flex : 1  1 auto;
   background-color: #8c8c8c;
@@ -92,5 +69,35 @@ ion-card {
 
 ion-item {
   --padding-start: 0;
->>>>>>> d5907fcdb8c6f1213920b520ba982dc5dcd39e68
+}
+ion-footer ion-label {
+  display: block;
+  margin-top: 5px; /* Ajusta el margen superior según tus preferencias */
+}
+
+.titulo{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.centered-image {
+  text-align: center;
+}
+
+.logo-menu {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto; /* Esto centrará la imagen horizontalmente */
+}
+
+.mat-icon-button mat-icon {
+  color:white;
+}
+
+.centered-grid {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ajusta la altura al 100% de la ventana */
 }

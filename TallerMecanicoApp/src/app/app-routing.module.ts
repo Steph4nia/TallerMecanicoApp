@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'restablecer-password',
     loadChildren: () => import('./restablecer-password/restablecer-password.module').then( m => m.RestablecerPasswordPageModule)
+  },  {
+    path: 'animacion',
+    loadChildren: () => import('./animacion/animacion.module').then( m => m.AnimacionPageModule)
   },
+
 ];
 
 @NgModule({

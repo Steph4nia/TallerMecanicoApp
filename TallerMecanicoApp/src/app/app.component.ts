@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { register } from 'swiper/element/bundle'
 register();
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,11 @@ register();
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(public router: Router) {
+    this.initializeApp();
+  }
+  initializeApp(){
+    this.router.navigateByUrl('animacion')
+  };
 }
+

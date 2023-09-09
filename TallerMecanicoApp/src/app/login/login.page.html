@@ -7,16 +7,20 @@
 <ion-content class="content-center">
   <ion-img class="logo" src="assets/imagenes/logo.jpg"></ion-img>
 
-  <ion-item>
-    <ion-label position="floating"> Usuario</ion-label>
-    <ion-input [(ngModel)]="formLogin.usuario" placeholder="Ingrese su usuario"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating"> Contraseña</ion-label>
-    <ion-input [(ngModel)]="formLogin.password" type="password" placeholder="Ingrese su contraseña"></ion-input>
-  </ion-item>
-  
-  <ion-button (click)="iniciarSesion()" shape="block">Iniciar sesión</ion-button>
+ 
+  <form (ngSubmit)="iniciarSesion()">
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input [(ngModel)]="formLogin.usuario" name="usuario" placeholder="Ingrese su usuario"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="formLogin.password" name="password" type="password" placeholder="Ingrese su contraseña"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" shape="block">Iniciar sesión</ion-button>
+    
+  </form>
 
   <ion-row justify-content-end class="ion-text-end">
     <ion-col>
@@ -27,11 +31,11 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-row class="ion-align-items-center"> <!-- Alinea verticalmente el contenido -->
+    <ion-row class="ion-align-items-center">
       <ion-col size="6">
         <ion-title>ServiExpress</ion-title>
       </ion-col>
-      <ion-col size="6" class="ion-text-right"> <!-- Aplica alineación a la derecha -->
+      <ion-col size="6" class="ion-text-right">
         <ion-label>Stephania Lucero</ion-label>
         <ion-label>Isabella Silva</ion-label>
         <ion-label>Patricia Nieves</ion-label>

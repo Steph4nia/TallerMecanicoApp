@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
-import { Router, NavigationExtras } from '@angular/router';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,40 +8,49 @@ import { Router, NavigationExtras } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  emailFormControl = new FormControl();
-  passwordFormControl = new FormControl();
-  matcher = new ErrorStateMatcher();
-
   formLogin = {
-    usuario: '',
+    email: '',
     password: '',
   };
 
-  constructor(private router: Router) {
-    
-  }
+  errorMessage: string = ''; // Variable para mostrar mensajes de error
+
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {}
 
-  /**
-   * Esta función se llama al iniciar sesión.
-   * Registra los valores del usuario y navega a la página de inicio (home).
-   */
   iniciarSesion() {
-    console.log('usuario: ' + this.formLogin.usuario);
-    console.log('password: ' + this.formLogin.password);
+    const { email, password } = this.formLogin;
+    this.errorMessage = '';
 
-    // Crear el objeto NavigationExtras con los datos a enviar
-    let datosEnviar: NavigationExtras = {
-      queryParams: { 
-        usuario: this.formLogin.usuario, // Establecer usuario
-      }
-    };
+    this.authService.login(email, password)
+      .then((userCredential) => {
+        console.log('Inicio de sesión exitoso');
+        // Redirige al usuario a la página de inicio (home) y pasa el parámetro 'usuario'
+        this.router.navigate(['/home'], {
+          queryParams: { usuario: email } // Puedes cambiar 'email' al campo que contenga el nombre de usuario
+        });
+      })
+      .catch((error) => {
+        console.error('Error al iniciar sesión:', error);
 
-    // Agrega un registro en la consola para verificar los valores
-    console.log('Valores enviados:', this.formLogin);
+        if (error.code === 'auth/invalid-login-credentials') {
+          this.errorMessage = 'Su cuenta o contraseña no es correcta.';
+        } else {
+          this.errorMessage = 'Error al iniciar sesión. Inténtalo de nuevo más tarde.';
+        }
+      });
+  }
 
-    // Navega a la página de inicio (home) con los datos adicionales
-    this.router.navigate(['/home'], datosEnviar);
+  cerrarSesion() {
+    this.authService.logout()
+      .then(() => {
+        console.log('Cierre de sesión exitoso');
+        this.router.navigate(['/login']);
+      })
+      .catch((error) => {
+        console.error('Error al cerrar sesión:', error);
+        this.errorMessage = 'Error al cerrar sesión. Inténtalo de nuevo más tarde.';
+      });
   }
 }

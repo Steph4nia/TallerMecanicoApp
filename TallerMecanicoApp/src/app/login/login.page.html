@@ -7,11 +7,10 @@
 <ion-content class="content-center">
   <ion-img class="logo" src="assets/imagenes/logo.jpg"></ion-img>
 
- 
   <form (ngSubmit)="iniciarSesion()">
     <ion-item>
-      <ion-label position="floating">Usuario</ion-label>
-      <ion-input [(ngModel)]="formLogin.usuario" name="usuario" placeholder="Ingrese su usuario"></ion-input>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input [(ngModel)]="formLogin.email" name="email" placeholder="Ingrese su correo electrónico"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Contraseña</ion-label>
@@ -19,8 +18,12 @@
     </ion-item>
 
     <ion-button type="submit" shape="block">Iniciar sesión</ion-button>
-    
   </form>
+
+  <!-- Espacio reservado para mostrar mensajes de error -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
 
   <ion-row justify-content-end class="ion-text-end">
     <ion-col>

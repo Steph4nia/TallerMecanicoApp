@@ -9,12 +9,13 @@ import { Router } from '@angular/router';
 export class AnimacionPage implements OnInit {
 
   constructor(public router:Router) { 
-    setTimeout(() =>{
-      this.router.navigateByUrl('login')
-    },1000);
+    
   }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.router.navigateByUrl('login');
+    }, 1000);
   }
 
 }
